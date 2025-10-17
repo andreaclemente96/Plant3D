@@ -11,3 +11,8 @@ FollowLeftHandOnGrab.cs: Permite manipular objetos 3D usando la mano izquierda e
 HeadLockedUI.cs: Mantiene la interfaz siempre orientada hacia el usuario.
 
 InteractableToggleCollection.cs: Coordina la activación y desactivación de objetos interactivos en colecciones de botones o toggles.
+
+
+Modelo preentrenado segmentacion.py: Ejecuta la segmentación semántica de una nube de puntos 3D mediante el modelo PlantNet/PSegNet, asignando etiquetas y colores por clase y generando un archivo .ply segmentado.
+
+conversión ply a malla.py: Reconstruye mallas tridimensionales a partir de las nubes de puntos segmentadas, aplicando distintos métodos de triangulación y suavizado según la clase detectada.
