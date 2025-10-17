@@ -4,7 +4,7 @@ using TMPro;
 public class ResetManager : MonoBehaviour
 {
     public GameObject[] partesPlanta;
-    public TextMeshPro textoUI; // Changed from TextMeshProUGUI to TextMeshPro
+    public TextMeshPro textoUI; 
 
     public void RestaurarPlanta()
     {
@@ -15,4 +15,5 @@ public class ResetManager : MonoBehaviour
 
         textoUI.gameObject.SetActive(false);
     }
+
 }
