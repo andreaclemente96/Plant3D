@@ -8,7 +8,7 @@ def create_mesh_from_point_cloud(pcd_segment, class_label):
         print(f"No hay suficientes puntos para la clase {class_label}.")
         return None
 
-    print(f"🛠️ Creando malla para la clase {class_label} con {len(pcd_segment.points)} puntos...")
+    print(f" Creando malla para la clase {class_label} con {len(pcd_segment.points)} puntos...")
 
     # Estimar las normales 
     pcd_segment.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
@@ -81,3 +81,4 @@ if __name__ == "__main__":
     input_file = r"Rutadeseada\planta_segmentada.ply"
 
     main_reconstruction(input_file)
+
