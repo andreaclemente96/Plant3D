@@ -5,7 +5,7 @@ import sys
 
 def create_mesh_from_point_cloud(pcd_segment, class_label):
     if len(pcd_segment.points) < 50:
-        print(f"❌ No hay suficientes puntos para la clase {class_label}. Saltando la creación de la malla.")
+        print(f"No hay suficientes puntos para la clase {class_label}.")
         return None
 
     print(f"🛠️ Creando malla para la clase {class_label} con {len(pcd_segment.points)} puntos...")
@@ -69,7 +69,7 @@ def main_reconstruction(input_ply_path):
             mesh_list.append(mesh)
             output_mesh_path = f"malla_segmento_{i}.obj"
             o3d.io.write_triangle_mesh(output_mesh_path, mesh)
-            print(f"✅ Malla guardada en: {output_mesh_path}")
+            print(f"Malla guardada en: {output_mesh_path}")
             
     if mesh_list:
         print("\nVisualizando todas las mallas. Cerrar al terminar.")
@@ -79,4 +79,5 @@ def main_reconstruction(input_ply_path):
 
 if __name__ == "__main__":
     input_file = r"Rutadeseada\planta_segmentada.ply"
+
     main_reconstruction(input_file)
